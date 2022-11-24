@@ -653,6 +653,7 @@ class RawEditorState extends EditorState
             onCheckboxTap: _handleCheckboxTap,
             readOnly: widget.readOnly,
             customStyleBuilder: widget.customStyleBuilder);
+         
         result.add(Directionality(
             textDirection: getDirectionOfNode(node), child: editableTextBlock));
       } else {
