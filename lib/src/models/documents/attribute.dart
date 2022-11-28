@@ -35,6 +35,7 @@ class Attribute<T> {
     Attribute.direction.key: Attribute.direction,
     Attribute.list.key: Attribute.list,
     Attribute.codeBlock.key: Attribute.codeBlock,
+    Attribute.checkListBlock.key: Attribute.checkListBlock,
     Attribute.blockQuote.key: Attribute.blockQuote,
     Attribute.indent.key: Attribute.indent,
     Attribute.width.key: Attribute.width,
@@ -78,6 +79,8 @@ class Attribute<T> {
 
   static const CodeBlockAttribute codeBlock = CodeBlockAttribute();
 
+  static const ChecklistBlockAttribute checkListBlock = ChecklistBlockAttribute();
+
   static const BlockQuoteAttribute blockQuote = BlockQuoteAttribute();
 
   static const DirectionAttribute direction = DirectionAttribute(null);
@@ -117,6 +120,7 @@ class Attribute<T> {
     Attribute.align.key,
     Attribute.list.key,
     Attribute.codeBlock.key,
+    Attribute.checkListBlock.key,
     Attribute.blockQuote.key,
     Attribute.indent.key,
     Attribute.direction.key,
@@ -126,6 +130,7 @@ class Attribute<T> {
     Attribute.list.key,
     Attribute.align.key,
     Attribute.codeBlock.key,
+    Attribute.checkListBlock.key,
     Attribute.blockQuote.key,
     Attribute.indent.key,
     Attribute.direction.key,
@@ -135,6 +140,7 @@ class Attribute<T> {
     Attribute.header.key,
     Attribute.list.key,
     Attribute.codeBlock.key,
+    Attribute.checkListBlock.key,
     Attribute.blockQuote.key,
   });
 
@@ -315,6 +321,10 @@ class ListAttribute extends Attribute<String?> {
 
 class CodeBlockAttribute extends Attribute<bool> {
   const CodeBlockAttribute() : super('code-block', AttributeScope.BLOCK, true);
+}
+
+class ChecklistBlockAttribute extends Attribute<bool> {
+  const ChecklistBlockAttribute() : super('checklist-block', AttributeScope.BLOCK, true);
 }
 
 class BlockQuoteAttribute extends Attribute<bool> {

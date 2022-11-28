@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
         centerTitle: false,
         title: const Text(
-          'Flutter Quill',
+          'Editor',
         ),
         actions: [
           IconButton(
@@ -177,22 +177,21 @@ class _HomePageState extends State<HomePage> {
           return _onTripleClickSelection();
         },
         customStyles: DefaultStyles(
-          h1: DefaultTextBlockStyle(
-              const TextStyle(
-                fontSize: 32,
-                color: Colors.black,
-                height: 1.15,
-                fontWeight: FontWeight.w300,
-              ),
-              const Tuple2(16, 0),
-              const Tuple2(0, 0),
-              null),
+          code: DefaultStyles.getInstance(context).code!.copyWith(
+            verticalSpacing: Tuple2(16,0),
+            lineSpacing: const Tuple2(4,4),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(color: Theme.of(context).primaryColor)
+            )
+          ),
           sizeSmall: const TextStyle(fontSize: 9),
         ),
         embedBuilders: [
           ...FlutterQuillEmbeds.builders(),
           NotesEmbedBuilder(addEditNote: _addEditNote)
         ],
+        
       ),
     );
     if (kIsWeb) {

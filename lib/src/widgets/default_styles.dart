@@ -55,6 +55,20 @@ class DefaultTextBlockStyle {
   /// Decoration, if present, is painted in the content area, excluding
   /// any [spacing].
   final BoxDecoration? decoration;
+
+  DefaultTextBlockStyle copyWith({
+    TextStyle? style,
+    Tuple2<double, double>? verticalSpacing,
+    Tuple2<double, double>? lineSpacing,
+    BoxDecoration? decoration,
+  }) {
+    return DefaultTextBlockStyle(
+      style ?? this.style,
+      verticalSpacing ?? this.verticalSpacing,
+      lineSpacing ?? this.lineSpacing,
+      decoration ?? this.decoration,
+    );
+  }
 }
 
 /// Theme data for inline code.
@@ -118,8 +132,7 @@ class InlineCodeStyle {
   }
 
   @override
-  int get hashCode =>
-      Object.hash(style, header1, header2, header3, backgroundColor, radius);
+  int get hashCode => Object.hash(style, header1, header2, header3, backgroundColor, radius);
 }
 
 class DefaultListBlockStyle extends DefaultTextBlockStyle {
@@ -241,8 +254,7 @@ class DefaultStyles {
             const Tuple2(8, 0),
             const Tuple2(0, 0),
             null),
-        paragraph: DefaultTextBlockStyle(
-            baseStyle, const Tuple2(0, 0), const Tuple2(0, 0), null),
+        paragraph: DefaultTextBlockStyle(baseStyle, const Tuple2(0, 0), const Tuple2(0, 0), null),
         bold: const TextStyle(fontWeight: FontWeight.bold),
         italic: const TextStyle(fontStyle: FontStyle.italic),
         small: const TextStyle(fontSize: 12),
@@ -275,8 +287,7 @@ class DefaultStyles {
             const Tuple2(0, 0),
             const Tuple2(0, 0),
             null),
-        lists: DefaultListBlockStyle(
-            baseStyle, baseSpacing, const Tuple2(0, 6), null, null),
+        lists: DefaultListBlockStyle(baseStyle, baseSpacing, const Tuple2(0, 6), null, null),
         quote: DefaultTextBlockStyle(
             TextStyle(color: baseStyle.color!.withOpacity(0.6)),
             baseSpacing,
@@ -299,12 +310,9 @@ class DefaultStyles {
               color: Colors.grey.shade50,
               borderRadius: BorderRadius.circular(2),
             )),
-        indent: DefaultTextBlockStyle(
-            baseStyle, baseSpacing, const Tuple2(0, 6), null),
-        align: DefaultTextBlockStyle(
-            baseStyle, const Tuple2(0, 0), const Tuple2(0, 0), null),
-        leading: DefaultTextBlockStyle(
-            baseStyle, const Tuple2(0, 0), const Tuple2(0, 0), null),
+        indent: DefaultTextBlockStyle(baseStyle, baseSpacing, const Tuple2(0, 6), null),
+        align: DefaultTextBlockStyle(baseStyle, const Tuple2(0, 0), const Tuple2(0, 0), null),
+        leading: DefaultTextBlockStyle(baseStyle, const Tuple2(0, 0), const Tuple2(0, 0), null),
         sizeSmall: const TextStyle(fontSize: 10),
         sizeLarge: const TextStyle(fontSize: 18),
         sizeHuge: const TextStyle(fontSize: 22));
