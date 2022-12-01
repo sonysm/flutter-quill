@@ -178,7 +178,7 @@ class _HomePageState extends State<HomePage> {
         },
         customStyles: DefaultStyles(
           code: DefaultStyles.getInstance(context).code!.copyWith(
-            verticalSpacing: Tuple2(16,0),
+            verticalSpacing: const Tuple2(16,0),
             lineSpacing: const Tuple2(4,4),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
@@ -229,17 +229,17 @@ class _HomePageState extends State<HomePage> {
     }
     var toolbar = QuillToolbar.basic(
       controller: _controller!,
-      embedButtons: FlutterQuillEmbeds.buttons(
-        // provide a callback to enable picking images from device.
-        // if omit, "image" button only allows adding images from url.
-        // same goes for videos.
-        onImagePickCallback: _onImagePickCallback,
-        onVideoPickCallback: _onVideoPickCallback,
-        // uncomment to provide a custom "pick from" dialog.
-        // mediaPickSettingSelector: _selectMediaPickSetting,
-        // uncomment to provide a custom "pick from" dialog.
-        // cameraPickSettingSelector: _selectCameraPickSetting,
-      ),
+      // embedButtons: FlutterQuillEmbeds.buttons(
+      //   // provide a callback to enable picking images from device.
+      //   // if omit, "image" button only allows adding images from url.
+      //   // same goes for videos.
+      //   onImagePickCallback: _onImagePickCallback,
+      //   onVideoPickCallback: _onVideoPickCallback,
+      //   // uncomment to provide a custom "pick from" dialog.
+      //   // mediaPickSettingSelector: _selectMediaPickSetting,
+      //   // uncomment to provide a custom "pick from" dialog.
+      //   // cameraPickSettingSelector: _selectCameraPickSetting,
+      // ),
       showAlignmentButtons: true,
       afterButtonPressed: _focusNode.requestFocus,
     );
@@ -278,14 +278,14 @@ class _HomePageState extends State<HomePage> {
               child: quillEditor,
             ),
           ),
-          kIsWeb
-              ? Expanded(
-                  child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
-                  child: toolbar,
-                ))
-              : Container(child: toolbar)
+          // kIsWeb
+          //     ? Expanded(
+          //         child: Container(
+          //         padding:
+          //             const EdgeInsets.symmetric(vertical: 16, horizontal: 8),
+          //         child: toolbar,
+          //       ))
+          //     : Container(child: toolbar)
         ],
       ),
     );

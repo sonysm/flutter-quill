@@ -190,11 +190,15 @@ class EditableTextBlock extends StatelessWidget {
     }
 
     if (attrs.containsKey(Attribute.checkListBlock.key)) {
+      var att = attrs[Attribute.checkListBlock.key]!;
       return CheckboxPoint(
         size: 14,
-        value: true,
+        value: att.value,
         enabled: true,
-        onChanged: (checked) => onCheckboxTap(line.documentOffset, checked),
+        onChanged: (checked) {
+          // att.value = false;
+          // onCheckboxTap(line.documentOffset, checked);
+        },
       );
     }
 

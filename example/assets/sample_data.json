@@ -1,5 +1,21 @@
 [
   {
+    "insert": "\nvar BuJo = 'Bullet' + 'Journal'",
+    "attributes": {
+      "italic": true,
+      "bold": true
+    }
+  },
+  
+  {
+    "attributes": {
+      "italic": true
+    },
+    "insert": "\n"
+  },
+
+
+  {
     "insert": "\nvar BuJo = 'Bullet' + 'Journal'"
   },
   {
@@ -17,6 +33,34 @@
     },
     "insert": "\n"
   },
+
+
+
+
+
+  {
+    "insert": "\nvar BuJo = 'Bullet' + 'Journal'"
+  },
+  {
+    "attributes": {
+      "checklist-block": true
+    },
+    "insert": "\n"
+  },
+  {
+    "insert": "block code line 2"
+  },
+  {
+    "attributes": {
+      "checklist-block": true
+    },
+    "insert": "\n"
+  },
+
+
+
+
+
   {
     "insert": "this is a check list"
   },
