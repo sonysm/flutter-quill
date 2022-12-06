@@ -12,7 +12,8 @@ dependencies:
   flutter:
     sdk: flutter
 
-  flutter_quill: ^6.0.0
+  flutter_quill:
+    git: https://github.com/sonysm/flutter-quill.git
 
   image_picker: ^0.8.5+3
   photo_view: ^0.14.0
