@@ -79,7 +79,10 @@ class Attribute<T> {
 
   static const CodeBlockAttribute codeBlock = CodeBlockAttribute();
 
-  static const ChecklistBlockAttribute checkListBlock = ChecklistBlockAttribute();
+  static const ChecklistBlockAttribute checkListBlock =
+      ChecklistBlockAttribute();
+  static const ChecklistBlockAttribute uncheckListBlock =
+      ChecklistBlockAttribute(false);
 
   static const BlockQuoteAttribute blockQuote = BlockQuoteAttribute();
 
@@ -324,7 +327,8 @@ class CodeBlockAttribute extends Attribute<bool> {
 }
 
 class ChecklistBlockAttribute extends Attribute<bool> {
-  const ChecklistBlockAttribute() : super('checklist-block', AttributeScope.BLOCK, true);
+  const ChecklistBlockAttribute([bool value = true])
+      : super('checklist-block', AttributeScope.BLOCK, value);
 }
 
 class BlockQuoteAttribute extends Attribute<bool> {

@@ -1,26 +1,11 @@
 [
   {
-    "insert": "\nvar BuJo = 'Bullet' + 'Journal'",
-    "attributes": {
-      "italic": true,
-      "bold": true
-    }
-  },
-  
-  {
-    "attributes": {
-      "italic": true
-    },
-    "insert": "\n"
-  },
-
-
-  {
     "insert": "\nvar BuJo = 'Bullet' + 'Journal'"
   },
   {
     "attributes": {
-      "checklist-block": true
+      "checklist-block": true,
+      "checked": true
     },
     "insert": "\n"
   },
@@ -29,21 +14,38 @@
   },
   {
     "attributes": {
-      "checklist-block": true
+      "checklist-block": true,
+      "checked": false
     },
     "insert": "\n"
   },
-
-
-
-
-
+  {
+    "insert": ""
+  },
+  {
+    "attributes": {
+      "checklist-block": true,
+      "checked": false
+    },
+    "insert": "\n"
+  },
+  {
+    "insert": ""
+  },
+  {
+    "attributes": {
+      "checklist-block": true,
+      "checked": false
+    },
+    "insert": "\n"
+  },
   {
     "insert": "\nvar BuJo = 'Bullet' + 'Journal'"
   },
   {
     "attributes": {
-      "checklist-block": true
+      "checklist-block": true,
+      "checked": true
     },
     "insert": "\n"
   },
@@ -52,34 +54,29 @@
   },
   {
     "attributes": {
-      "checklist-block": true
+      "checklist-block": true,
+      "checked": false
     },
     "insert": "\n"
   },
-
-
-
-
-
   {
-    "insert": "this is a check list"
+    "insert": ""
   },
   {
     "attributes": {
-      "list": "checked"
+      "checklist-block": true,
+      "checked": false
     },
     "insert": "\n"
   },
   {
-    "insert": "this is a uncheck list"
+    "insert": ""
   },
   {
     "attributes": {
-      "list": "unchecked"
+      "checklist-block": true,
+      "checked": false
     },
-    "insert": "\n"
-  },
-  {
     "insert": "\n"
   }
 ]
