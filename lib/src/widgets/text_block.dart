@@ -106,7 +106,7 @@ class EditableTextBlock extends StatelessWidget {
       scrollBottomInset: scrollBottomInset,
       decoration:
           _getDecorationForBlock(block, defaultStyles) ?? const BoxDecoration(),
-      contentPadding: contentPadding!.copyWith(bottom: 48),
+      contentPadding: contentPadding,
       children: _buildChildren(context, indentLevelCounts),
     );
   }
@@ -555,19 +555,19 @@ class RenderEditableTextBlock extends RenderEditableContainerBox
     _paintDecoration(context, offset);
     defaultPaint(context, offset);
 
-    final canvas = context.canvas;
-    canvas.save();
-    canvas.translate(offset.dx, offset.dy);
+    // final canvas = context.canvas;
+    // canvas.save();
+    // canvas.translate(offset.dx, offset.dy);
 
-    // paint close
-    final thumbPaint = Paint()..color = Colors.green;
-    final close = Offset(size.width, 0);
-    canvas.drawCircle(close, 24 / 2, thumbPaint);
+    // // paint close
+    // final thumbPaint = Paint()..color = Colors.green;
+    // final close = Offset(size.width, 0);
+    // canvas.drawCircle(close, 24 / 2, thumbPaint);
 
-    // paint add
-    final addPaint = Paint()..color = Colors.green;
-    final add = Offset(24, size.height - 24);
-    canvas.drawCircle(add, 24 / 2, addPaint);
+    // // paint add
+    // final addPaint = Paint()..color = Colors.green;
+    // final add = Offset(24, size.height - 24);
+    // canvas.drawCircle(add, 24 / 2, addPaint);
 
     // canvas.restore();
   }
